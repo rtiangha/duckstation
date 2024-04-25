@@ -42,12 +42,6 @@ jobs:
         DEBUG: 0
       run: scripts/build-dependencies-windows-x64.bat
 
-    - name: Build ARM64 Dependencies
-      if: steps.cache-deps.outputs.cache-hit != 'true'
-      env:
-        DEBUG: 0
-      run: scripts/build-dependencies-windows-arm64.bat
-
     - name: Tag as preview build
       if: github.ref == 'refs/heads/master'
       shell: cmd

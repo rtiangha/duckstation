@@ -11,6 +11,7 @@ if exist "%ProgramFiles%\Microsoft Visual Studio\2022\Enterprise\VC\Auxiliary\Bu
   goto error
 )
 
+set CL="/O2 /arch:AVX2 /favor:INTEL64"
 set SEVENZIP="C:\Program Files\7-Zip\7z.exe"
 set PATCH="C:\Program Files\Git\usr\bin\patch.exe"
 
